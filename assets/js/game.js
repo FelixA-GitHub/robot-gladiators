@@ -82,10 +82,7 @@ var startGame = function() {
       var pickedEnemyName = enemyNames[i];
 
       // reset enemyHealth before starting new fight
-      enemyHealth = 50;
-
-      // use debugger to pause script from running and check what's going on at that moment in the code
-      // debugger;
+      enemyHealth = randomNumber();
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyName);
@@ -186,6 +183,13 @@ var shop = function() {
       shop();
       break;
   }       
+};
+
+// function to generate a random numeric value
+var randomNumber = function() {
+  var value = Math.floor(Math.random() * 21) + 40;
+
+  return value;
 };
 
 // start the game when the page loads
